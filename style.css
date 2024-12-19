@@ -83,7 +83,6 @@ body{
     top: 0;
     display: block;
     box-sizing: border-box;
-    background-color: aqua;
     /* z-index:100; */
 }
 .header-top{
@@ -238,7 +237,7 @@ body{
    justify-content: flex-end;
    height:80px;
    box-sizing:border-box;
-
+   position: relative;
 }
 .acc-left{
     display: flex;
@@ -257,6 +256,8 @@ body{
     position: relative;
     z-index:1;
     box-sizing: border-box;  
+    background: transparent;
+    display: inline-block;
 }
 .acc-left-1{
     display: flex;
@@ -269,6 +270,8 @@ body{
     line-height: 20.2px;
     font-family:"Airbnb Cereal VF", Circular, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
     text-align: start;
+    white-space: nowrap;
+    letter-spacing: normal;
 }
 .acc-right{
     position:relative;
@@ -304,14 +307,13 @@ body{
     position: relative;
     cursor: pointer;
     color: var(--dark);
-    background: transparent;
 }
 .acc-svg img{
     display: block;
     height: 16px;
     width: 16px;
     fill: var(--dark);
-    color: #000000;
+    color:currentColor;
 }
 .menu{
     box-sizing: border-box;
@@ -346,11 +348,89 @@ body{
     fill: none;
     height: 16px;
     width: 16px;
-    /* stroke:currentColor;
-    stroke-width: 3; */
+    stroke:currentColor;
+    stroke-width: 3; 
 }
+.slider{
+    background-color: var(--light);
+    width: 100%;
+    position: sticky;
+    height: 90px;
+    z-index: 9;
+    top:68px;
+    padding-block-start:12px;
+    box-sizing: border-box;
+    display: block;
+    border-top: 1px solid var(--light-dark);
+}
+.inner-slider{
+    padding: 0 80px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    margin: 0 auto;
+    max-width: 1814px;
+    box-sizing: border-box; 
+    flex-grow:1; 
+    column-gap:16px;
+    max-height:78px;
+    margin-left:-20px;
+}
+.slider-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 12px;
+}
+.slider-content img{
+    width: 24px;
+    height: 24px;
+    color: var(--dark-light);
+}
+.slider-content p{
+    line-height: 1rem;
+    font-weight: 500;
+    font-size: 0.75rem;
+    color: #6A6A6A;
+    font-family:"Airbnb Cereal VF", Circular, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
+    
+}
+/* .slider-content{
+    flex-grow: 1;
+    box-sizing: border-box;
+    display: block;
+}
+.slider-content-inner{
+    display:grid;
+    grid-template-columns: 100%;
+    max-height: 78px;
+    box-sizing: border-box; 
+}
+.content-1 */
+ .slider-btn{
+    border-radius:50px ;
+    width: 30px;
+    height: 30px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--light-dark);
+    background-color: var(--light);
+ }
 
-
+.slider-btn img{
+    display: block;
+    width: 16px;
+    height: 16px;
+}
+.card-content{
+    width: auto;
+    height: 100px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
 
 
 
